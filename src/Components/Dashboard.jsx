@@ -31,15 +31,15 @@ function Dashboard() {
       <div className="container-fluid dashboard_header">
         <div className="col-md-12 crads_header">
           <div className="col-md-8">
-            <h5 className="stock_lable">Stock</h5>
+            <h4 className="stock_lable">Stock</h4>
           </div>
           <div className="col-md-4 ">
-            <div className="" style={{}}>
+            <div style={{ float: "right", marginRight: "30px" }}>
               <i
-                class="bi bi-calendar4"
+                className="bi bi-calendar4"
                 style={{
                   backgroundColor: "#4c9539",
-                  padding: "5px",
+                  padding: "4px",
                   borderRadius: "5px",
                   color: "white",
                   fontSize: "16px",
@@ -68,18 +68,29 @@ function Dashboard() {
             {sumCard.map((valu) => {
               return (
                 <div className="col-md-2">
-                  <div class="card card_style">
+                  <div className="card card_style">
                     <div style={{ display: "flex" }}>
                       <div
-                        class="card-body "
-                        style={{ padding: "5px", textAlign: "left" }}
+                        className="card-body "
+                        style={{
+                          padding: "5px",
+                          textAlign: "left",
+                          width: "75%",
+                        }}
                       >
-                        <h5 class="card-title card_content">{valu.rice}</h5>
-                        <p class="card-text card_para">(25 kg bags)</p>
+                        <h5 className="card-title card_content">{valu.rice}</h5>
+                        <p className="card-text card_para">(25 kg bags)</p>
                       </div>
                       <div className="card_count">
                         {valu.sale === 0 ? (
-                          <h6 style={{ color: "red" }}>Out of the stock</h6>
+                          <h6
+                            style={{
+                              color: "red",
+                              fontSize: "11px",
+                            }}
+                          >
+                            Out of the stock
+                          </h6>
                         ) : valu.sale !== 0 ? (
                           <h4>{valu.sale}</h4>
                         ) : (
@@ -91,78 +102,6 @@ function Dashboard() {
                 </div>
               );
             })}
-
-            {/* <div className="col-md-2">
-              <div class="card card_style">
-                <div style={{ display: "flex" }}>
-                  <div
-                    class="card-body "
-                    style={{ padding: "5px", textAlign: "left" }}
-                  >
-                    <h6 class="card-title card_content">Basmathi Rice</h6>
-                    <p class="card-text card_para">(25 kg bags)</p>
-                  </div>
-                  <div className="card_count">
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "red",
-                      }}
-                    >
-                      Out Of stock
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div class="card card_style">
-                <div style={{ display: "flex" }}>
-                  <div
-                    class="card-body "
-                    style={{ padding: "5px", textAlign: "left" }}
-                  >
-                    <h5 class="card-title card_content">Black Rice</h5>
-                    <p class="card-text card_para">(25 kg bags)</p>
-                  </div>
-                  <div className="card_count">
-                    <h4>20</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div class="card card_style">
-                <div style={{ display: "flex" }}>
-                  <div
-                    class="card-body "
-                    style={{ padding: "5px", textAlign: "left" }}
-                  >
-                    <h5 class="card-title card_content">Bomba Rice</h5>
-                    <p class="card-text card_para">(25 kg bags)</p>
-                  </div>
-                  <div className="card_count">
-                    <h4>80</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div class="card card_style">
-                <div style={{ display: "flex" }}>
-                  <div
-                    class="card-body "
-                    style={{ padding: "5px", textAlign: "left" }}
-                  >
-                    <h5 class="card-title card_content">Auromatic Rice</h5>
-                    <p class="card-text card_para">(25 kg bags)</p>
-                  </div>
-                  <div className="card_count">
-                    <h4>50</h4>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -170,7 +109,7 @@ function Dashboard() {
       {/* dashboard Graphs*/}
       <div className="container-fluid dashboard_header">
         <div className="col-md-12 ">
-          <h5>Graphs</h5>
+          <h4>Graphs</h4>
         </div>
       </div>
       <div className="col-md-12 graph">
@@ -191,7 +130,7 @@ function Dashboard() {
                 labels: [""],
                 datasets: [
                   {
-                    label: "BlackRice",
+                    label: "Black Rice",
                     data: sumCard.map((vale) => vale.sale.sort),
                     backgroundColor: [
                       "#A3EC8F",
@@ -200,12 +139,12 @@ function Dashboard() {
                       "#3D8309",
                       "#336210",
                     ],
-                    borderColor: ["rgba(75, 192, 192, 1)"],
-                    borderWidth: 1,
+
+                    borderWidth: 0,
                     borderRadius: 15,
                   },
                   {
-                    label: "BasmathiRice",
+                    label: "Basmathi Rice",
                     data: [0],
                     backgroundColor: ["#42BC22"],
                     borderColor: ["rgba(75, 192, 192, 1)"],
@@ -213,7 +152,7 @@ function Dashboard() {
                     borderRadius: 15,
                   },
                   {
-                    label: "AuromaticRice",
+                    label: "Auromatic Rice",
                     data: [50],
                     backgroundColor: ["#51CE2F"],
                     borderColor: ["rgba(75, 192, 192, 1)"],
@@ -221,7 +160,7 @@ function Dashboard() {
                     borderRadius: 15,
                   },
                   {
-                    label: "BombaRice",
+                    label: "Bomba Rice",
                     data: [80],
                     backgroundColor: ["#3D8309"],
                     borderColor: ["rgba(75, 192, 192, 1)"],
@@ -229,7 +168,7 @@ function Dashboard() {
                     borderRadius: 15,
                   },
                   {
-                    label: "BrownRice",
+                    label: "Brown Rice",
                     data: [100],
                     backgroundColor: ["#336210"],
                     borderColor: ["rgba(75, 192, 192, 1)"],
@@ -283,20 +222,20 @@ function Dashboard() {
           <Doughnut
             data={{
               labels: [
-                "BombaRice      ",
-                "BrownRice       ",
-                "BasmathiRice    ",
-                "BlackRice       ",
-                "AuromaticRice  ",
+                "Bomba Rice      ",
+                "Brown Rice       ",
+                "Basmathi Rice    ",
+                "Black Rice       ",
+                "Auromatic Rice  ",
               ],
               datasets: [
                 {
                   labels: [
-                    "BombaRice      ",
-                    "BrownRice       ",
-                    "BasmathiRice    ",
-                    "BlackRice       ",
-                    "AuromaticRice  ",
+                    "Bomba Rice      ",
+                    "Brown Rice       ",
+                    "Basmathi Rice    ",
+                    "Black Rice       ",
+                    "Auromatic Rice  ",
                   ],
                   data: [20, 20, 20, 20, 20],
                   backgroundColor: [
@@ -340,20 +279,20 @@ function Dashboard() {
           <Doughnut
             data={{
               labels: [
-                "BombaRice",
-                "BrownRice",
-                "BasmathiRice",
-                "BlackRice",
-                "AuromaticRice",
+                "Bomba Rice",
+                "Brown Rice",
+                "Basmathi Rice",
+                "Black Rice",
+                "Auromatic Rice",
               ],
               datasets: [
                 {
                   labels: [
-                    "BombaRice",
-                    "BrownRice",
-                    "BasmathiRice",
-                    "BlackRice",
-                    "AuromaticRice",
+                    "Bomba Rice",
+                    "Brown Rice",
+                    "Basmathi Rice",
+                    "Black Rice",
+                    "Auromatic Rice",
                   ],
                   data: [20, 20, 20, 20, 20],
                   backgroundColor: [
