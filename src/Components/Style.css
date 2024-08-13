@@ -1,0 +1,128 @@
+.user_icon {
+  margin-right: 30px;
+}
+.user_icon i {
+  font-size: 24px;
+  background-color: #593b06;
+  border-radius: 20px;
+  padding: 0 5px;
+
+  color: #fff;
+}
+.user_icon p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.tab_buttons {
+  margin-left: 40px;
+}
+.tab_buttons ul {
+  margin-top: 33px;
+  margin-bottom: -16px;
+  float: left;
+}
+.tab_buttons ul li {
+  padding: 5px !important;
+}
+.logo_conatainer {
+  display: flex;
+}
+.table_header {
+  background-color: #c3ffb4;
+  padding: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.table_header h5 {
+  color: #2b6388;
+}
+.table_top {
+  border: 1px solid #000;
+}
+.table th {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b6388;
+  border-bottom: 2px solid #4c9539;
+}
+.july_month {
+  border-left: 4px solid #4c9539;
+}
+.july_month td {
+  background-color: #d5d5d5;
+}
+.dashboard_header {
+  color: #2b6388;
+  padding: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.crads_header {
+  display: flex;
+}
+.card_style {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 10px;
+  border-bottom: 5px solid #af7a1f;
+}
+.all_cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.card_count {
+  font-size: 30px;
+  font-weight: 700;
+  align-content: center;
+  margin-right: 10px;
+}
+.card_content {
+  font-size: 18px !important;
+  font-weight: 500;
+}
+.card_para {
+  font-size: 14px !important;
+  font-weight: 500;
+}
+.tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.graph {
+  display: flex;
+  margin-top: 20px;
+}
+.Card_body {
+  display: flex;
+}
+.stock_lable {
+  float: right;
+  margin-right: 180px;
+}
+.nav-pills .nav-link.active {
+  background-color: #dfdfdf !important;
+  border-bottom: 2px solid #4c7031;
+}
+@media screen and (max-width: 768px) {
+  .graph {
+    display: block;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .Card_body {
+    display: block;
+  }
+  .all_cards {
+    display: block;
+    justify-content: space-evenly;
+  }
+  .user_icon {
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  .tab_buttons {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "Month": "June",
+    "BrownRice": 20,
+    "BasmathiRice": 20,
+    "BlackRice": 20,
+    "BombaRice": 20,
+    "AuromaticRice": 20
+  },
+  {
+    "Id": 2,
+    "Month": "July",
+    "BrownRice": 20,
+    "BasmathiRice": 20,
+    "BlackRice": 20,
+    "BombaRice": 20,
+    "AuromaticRice": 20
+  },
+  {
+    "Id": 3,
+    "Month": "August",
+    "BrownRice": 100,
+    "BasmathiRice": 0,
+    "BlackRice": 80,
+    "BombaRice": 20,
+    "AuromaticRice": 50
+  }
+]
